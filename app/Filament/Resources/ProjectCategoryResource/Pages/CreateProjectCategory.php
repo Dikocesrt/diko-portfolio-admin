@@ -5,6 +5,7 @@ namespace App\Filament\Resources\ProjectCategoryResource\Pages;
 use App\Filament\Resources\ProjectCategoryResource;
 use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
 class CreateProjectCategory extends CreateRecord
@@ -13,9 +14,13 @@ class CreateProjectCategory extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
+        Log::info('mutateFormDataBeforeCreate terpanggil', $data);
+
         if (!isset($data['id'])) {
             $data['id'] = Str::uuid()->toString();
         }
+
+        Log::info('mutateFormDataBeforeCreate terpanggil', $data);
 
         return $data;
     }

@@ -6,6 +6,7 @@ use App\Filament\Resources\ProjectCategoryResource\Pages;
 use App\Filament\Resources\ProjectCategoryResource\RelationManagers;
 use App\Models\ProjectCategory;
 use Filament\Forms;
+use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -25,6 +26,7 @@ class ProjectCategoryResource extends Resource
     {
         return $form
             ->schema([
+                Hidden::make('id'),
                 TextInput::make('name')
                     ->placeholder("Capstone Project")
                     ->required()
