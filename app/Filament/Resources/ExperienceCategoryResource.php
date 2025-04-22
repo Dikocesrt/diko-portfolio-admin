@@ -2,11 +2,10 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProjectCategoryResource\Pages;
-use App\Filament\Resources\ProjectCategoryResource\RelationManagers;
-use App\Models\ProjectCategory;
+use App\Filament\Resources\ExperienceCategoryResource\Pages;
+use App\Filament\Resources\ExperienceCategoryResource\RelationManagers;
+use App\Models\ExperienceCategory;
 use Filament\Forms;
-use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -16,9 +15,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class ProjectCategoryResource extends Resource
+class ExperienceCategoryResource extends Resource
 {
-    protected static ?string $model = ProjectCategory::class;
+    protected static ?string $model = ExperienceCategory::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -27,9 +26,9 @@ class ProjectCategoryResource extends Resource
         return $form
             ->schema([
                 TextInput::make('name')
-                    ->placeholder("Capstone Project")
+                    ->placeholder("MSIB")
                     ->required()
-                    ->label("Project Category Name")
+                    ->label("Experience Category Name")
                     ->maxLength(255),
             ]);
     }
@@ -44,7 +43,7 @@ class ProjectCategoryResource extends Resource
                     ->dateTime(),
                 TextColumn::make('name')
                     ->searchable()
-                    ->label('Project Category Name')
+                    ->label('Experience Category Name')
             ])
             ->filters([
                 //
@@ -70,9 +69,9 @@ class ProjectCategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListProjectCategories::route('/'),
-            'create' => Pages\CreateProjectCategory::route('/create'),
-            'edit' => Pages\EditProjectCategory::route('/{record}/edit'),
+            'index' => Pages\ListExperienceCategories::route('/'),
+            'create' => Pages\CreateExperienceCategory::route('/create'),
+            'edit' => Pages\EditExperienceCategory::route('/{record}/edit'),
         ];
     }
 }

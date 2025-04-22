@@ -13,7 +13,7 @@ class ExperienceCategory extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['id', 'name'];
 
     protected $casts = [
         'created_at' => 'datetime',

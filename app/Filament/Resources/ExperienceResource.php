@@ -207,6 +207,8 @@ class ExperienceResource extends Resource
                         'November' => 'November',
                         'Desember' => 'December',
                     ]),
+                TextColumn::make('year_start')
+                    ->label('Year Start Experience'),
                 SelectColumn::make('month_end')
                     ->label('Month Finish Experience')
                     ->options([
@@ -223,8 +225,6 @@ class ExperienceResource extends Resource
                         'November' => 'November',
                         'Desember' => 'December',
                     ]),
-                TextColumn::make('year_start')
-                    ->label('Year Start Experience'),
                 TextColumn::make('year_end')
                     ->label('Year Finish Experience'),
                 TextColumn::make('position')
@@ -250,6 +250,7 @@ class ExperienceResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
