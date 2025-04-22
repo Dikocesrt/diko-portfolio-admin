@@ -16,6 +16,7 @@ class Skill extends Model
     protected $fillable = ['id', 'name', 'image', 'color', 'category', 'is_star'];
 
     protected $casts = [
+        'is_star' => 'boolean',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',

@@ -14,12 +14,13 @@ class Experience extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'name', 'image', 'company', 'location', 'location_type',
+        'id', 'name', 'image', 'company', 'location', 'location_type',
         'month_start', 'month_end', 'year_start', 'year_end', 'description',
         'position', 'employment_type', 'is_star', 'experience_category_id'
     ];
 
     protected $casts = [
+        'is_star' => 'boolean',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
         'deleted_at' => 'datetime',
