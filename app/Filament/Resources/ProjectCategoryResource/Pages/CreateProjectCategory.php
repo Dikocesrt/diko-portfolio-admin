@@ -14,13 +14,9 @@ class CreateProjectCategory extends CreateRecord
 
     protected function mutateFormDataBeforeCreate(array $data): array
     {
-        Log::info('mutateFormDataBeforeCreate terpanggil', $data);
-
         if (!isset($data['id'])) {
             $data['id'] = Str::uuid()->toString();
         }
-
-        Log::info('mutateFormDataBeforeCreate terpanggil', $data);
 
         return $data;
     }

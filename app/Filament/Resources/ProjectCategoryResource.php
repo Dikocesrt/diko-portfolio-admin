@@ -26,7 +26,6 @@ class ProjectCategoryResource extends Resource
     {
         return $form
             ->schema([
-                Hidden::make('id'),
                 TextInput::make('name')
                     ->placeholder("Capstone Project")
                     ->required()
@@ -41,9 +40,9 @@ class ProjectCategoryResource extends Resource
             ->columns([
                 TextColumn::make('created_at')
                     ->sortable()
-                    ->label('Waktu Input')
+                    ->label('Date Input')
                     ->dateTime(),
-                    TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable()
                     ->label('Category Name')
             ])
@@ -51,6 +50,7 @@ class ProjectCategoryResource extends Resource
                 //
             ])
             ->actions([
+                Tables\Actions\DeleteAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([

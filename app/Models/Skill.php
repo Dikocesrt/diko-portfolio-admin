@@ -13,7 +13,7 @@ class Skill extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['name', 'image', 'color', 'category', 'is_star'];
+    protected $fillable = ['id', 'name', 'image', 'color', 'category', 'is_star'];
 
     protected $casts = [
         'created_at' => 'datetime',
