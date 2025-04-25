@@ -22,7 +22,7 @@ class ProjectSkillResource extends Resource
 {
     protected static ?string $model = ProjectSkill::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-code-bracket-square';
 
     public static function form(Form $form): Form
     {
