@@ -13,7 +13,7 @@ class Award extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['name', 'description', 'year', 'experiences_id'];
+    protected $fillable = ['id', 'name', 'description', 'year', 'experience_id'];
 
     protected $casts = [
         'created_at' => 'datetime',

@@ -13,7 +13,7 @@ class ExperienceSkill extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['skill_id', 'experience_id'];
+    protected $fillable = ['id', 'skill_id', 'experience_id'];
 
     protected $casts = [
         'created_at' => 'datetime',
