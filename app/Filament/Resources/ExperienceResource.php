@@ -168,7 +168,7 @@ class ExperienceResource extends Resource
                     ->dateTime(),
                 ImageColumn::make('image')
                     ->label('Image')
-                    ->width(200)
+                    ->width(350)
                     ->height(200)
                     ->getStateUsing(fn ($record) => 'https://res.cloudinary.com/' . env('CLOUDINARY_CLOUD_NAME') . '/image/upload/' . $record->image),
                 TextColumn::make('name')

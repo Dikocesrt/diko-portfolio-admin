@@ -13,7 +13,7 @@ class Documentation extends Model
     protected $keyType = 'string';
     public $incrementing = false;
 
-    protected $fillable = ['image', 'project_id'];
+    protected $fillable = ['id', 'image', 'project_id'];
 
     protected $casts = [
         'created_at' => 'datetime',
