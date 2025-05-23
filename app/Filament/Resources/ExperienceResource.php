@@ -239,6 +239,7 @@ class ExperienceResource extends Resource
                         'internship' => 'Internship',
                         'freelance' => 'Freelance',
                         'seasonal' => 'Seasonal',
+                        'selfemployed' => 'Self Employed',
                     ]),
                 ToggleColumn::make('is_star')
                     ->label('Starred Skill'),
