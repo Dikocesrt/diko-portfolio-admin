@@ -124,6 +124,7 @@ class ExperienceResource extends Resource
                         'internship' => 'Internship',
                         'freelance' => 'Freelance',
                         'seasonal' => 'Seasonal',
+                        'selfemployed' => 'Self Employed',
                     ]),
                 Select::make('is_star')
                     ->label('Starred Skill?')
