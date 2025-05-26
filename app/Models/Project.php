@@ -14,7 +14,7 @@ class Project extends Model
     public $incrementing = false;
 
     protected $fillable = [
-        'id', 'name', 'image', 'description', 'date', 'type', 'is_star', 'experience_id', 'project_category_id',
+        'id', 'name', 'image', 'description', 'date', 'type', 'is_star', 'github_link', 'experience_id', 'project_category_id',
     ];
 
     protected $casts = [
