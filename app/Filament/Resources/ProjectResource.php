@@ -61,6 +61,11 @@ class ProjectResource extends Resource
                         'mobile' => 'Mobile',
                         'api' => 'API',
                     ]),
+                TextInput::make('github_link')
+                    ->placeholder("https://github.com/Dikocesrt/habit-master.git")
+                    ->required()
+                    ->label("Link Github")
+                    ->maxLength(255),
                 Select::make('is_star')
                     ->label('Starred Project?')
                     ->required()
@@ -70,7 +75,6 @@ class ProjectResource extends Resource
                     ]),
                 Select::make('experience_id')
                     ->label('Experience')
-                    ->required()
                     ->options(Experience::all()->pluck('name', 'id')),
                 Select::make('project_category_id')
                     ->label('Project Category')
@@ -124,6 +128,8 @@ class ProjectResource extends Resource
                         'mobile' => 'Mobile',
                         'api' => 'API',
                     ]),
+                TextColumn::make('github_link')
+                    ->label('Link Github'),
                 ToggleColumn::make('is_star')
                     ->label('Starred Project?'),
                 TextColumn::make('description')

@@ -93,6 +93,7 @@ class SkillResource extends Resource
                         'softwareskill' => 'Software Skills',
                     ]),
                 ToggleColumn::make('is_star')
+                    ->default(false)
                     ->label('Starred Skill'),
             ])
             ->filters([
